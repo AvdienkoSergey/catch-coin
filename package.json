@@ -8,6 +8,7 @@
     "release:bootstrap": "node bin/bootstrap.js",
     "release:pr": "node bin/create-pr.js",
     "release:release": "node bin/github-release.js",
+    "migrate": "node-pg-migrate",
     "start": "node main.js",
     "test": "mocha 'lib/**/*.test.js'"
   },
@@ -29,6 +30,7 @@
     "@types/node": "^22.14.0",
     "dotenv": "^16.4.7",
     "mocha": "^11.1.0",
+    "node-pg-migrate": "^7.9.1",
     "sinon": "^20.0.0",
     "typescript": "^5.8.3"
   },
