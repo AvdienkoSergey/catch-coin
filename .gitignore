@@ -1,0 +1,15 @@
+# Node modules
+node_modules
+
+# NPM cache
+.npm
+
+# System files
+.DS_Store
+.idea
+.vscode
+.cursor
+.env
+.npmrc
+
+# Release files

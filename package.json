@@ -1,0 +1,31 @@
+{
+  "name": "catch-coin",
+  "version": "0.0.0",
+  "description": "This app is for my daughter to learn financial literacy",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "release:bootstrap": "node bin/bootstrap.js",
+    "release:pr": "node bin/create-pr.js",
+    "release:release": "node bin/github-release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvdienkoSergey/catch-coin.git"
+  },
+  "author": "AvdienkoSA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AvdienkoSergey/catch-coin/issues"
+  },
+  "homepage": "https://github.com/AvdienkoSergey/catch-coin#readme",
+  "dependencies": {
+    "release-please": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "mocha": "^11.1.0",
+    "typescript": "^5.8.3"
+  }
+}
