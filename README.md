@@ -6,18 +6,24 @@
 
 1. Create or edit a `.env` file with these variables:
    ```
-   PG_USER=your_username
-   PG_PASSWORD=your_password
-   PG_DATABASE=your_database_name
-   DB_PORT=5432
+   DB_HOST=your_host
+   DB_USER=your_username
+   DB_PASSWORD=your_password
+   DB_DATABASE=your_database_name
+   DB_PORT=your_port
    ```
 
-2. Start the database:
+2. Initialize:
+    ```
+    docker-compose up -d
+    ```
+
+3. Start the database:
    ```
-   docker-compose up -d
+   docker-compose ps
    ```
 
-3. Stop the database:
+4. Stop the database:
    ```
    docker-compose down
    ```
@@ -25,11 +31,11 @@
 ### Connecting to Database
 
 The PostgreSQL database is available at:
-- Host: localhost
-- Port: The value of DB_PORT in your .env file (default 5432)
-- Username: PG_USER value
-- Password: PG_PASSWORD value
-- Database: PG_DATABASE value
+- Host: DB_HOST value or localhost
+- Port: DB_PORT value or 5432
+- Username: DB_USER value
+- Password: DB_PASSWORD value
+- Database: DB_DATABASE value
 
 ### Data Storage
 

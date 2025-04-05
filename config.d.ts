@@ -17,11 +17,6 @@ declare const config: {
       user: string;
       password: string;
     };
-    pg: {
-      database: string;
-      user: string;
-      password: string;
-    };
   };
 
   export default config;
