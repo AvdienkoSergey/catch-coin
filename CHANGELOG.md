@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.4.0...v1.5.0) (2025-04-05)
+
+
+### Features
+
+* **http:** Added http protocol and transport layer. Added first api controller ([bb0f19f](https://github.com/AvdienkoSergey/catch-coin/commit/bb0f19f1d6664b807f2d28868be3bad4bd46cc49))
+* **migration:** Added loader for build  api ([d726acb](https://github.com/AvdienkoSergey/catch-coin/commit/d726acb30fface3bc2e47bb95905bb631919e810))
+
 ## [1.4.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.3.0...v1.4.0) (2025-04-05)
 
 
