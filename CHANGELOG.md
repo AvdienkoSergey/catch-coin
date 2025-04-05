@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.3.0...v1.4.0) (2025-04-05)
+
+
+### Features
+
+* **migration:** Added the ability to work with data migrations in postgres ([6af20ee](https://github.com/AvdienkoSergey/catch-coin/commit/6af20ee9fa493b35b596c812b84f2ecc6c83e325))
+
+
+### Bug Fixes
+
+* **config:** Removed duplicate data ([c8fc801](https://github.com/AvdienkoSergey/catch-coin/commit/c8fc8010da750c1e599828ebb77f1d4e726b8930))
+
 ## [1.3.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.2.0...v1.3.0) (2025-04-05)
 
 
