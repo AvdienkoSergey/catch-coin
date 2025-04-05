@@ -9,7 +9,7 @@
     "release:pr": "node bin/create-pr.js",
     "release:release": "node bin/github-release.js",
     "start": "node main.js",
-    "test": "test"
+    "test": "mocha 'lib/**/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,10 @@
     "dotenv": "^16.4.7",
     "mocha": "^11.1.0",
     "typescript": "^5.8.3"
+  },
+  "mocha": {
+    "timeout": 5000,
+    "extension": ["js"],
+    "recursive": true
   }
 }
