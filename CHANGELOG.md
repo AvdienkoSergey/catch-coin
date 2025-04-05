@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.1.0...v1.2.0) (2025-04-05)
+
+
+### Features
+
+* **lib/logger:** Added logger and test. Updated package.json file ([6c12d1c](https://github.com/AvdienkoSergey/catch-coin/commit/6c12d1c7df11f70880d6ee8ed1b69791a7207dc9))
+
 ## [1.1.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.0.0...v1.1.0) (2025-04-05)
 
 
