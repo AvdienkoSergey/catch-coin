@@ -1,6 +1,6 @@
 {
   "name": "catch-coin",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "This app is for my daughter to learn financial literacy",
   "main": "main.js",
   "type": "module",
