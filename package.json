@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/AvdienkoSergey/catch-coin#readme",
   "dependencies": {
+    "pg": "^8.14.1",
     "release-please": "^17.0.0"
   },
   "devDependencies": {
