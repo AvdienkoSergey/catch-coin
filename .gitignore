@@ -16,4 +16,4 @@ node_modules
 log/*.log
 
 # migrations
-migrations/*.js
+# migrations/*.js

@@ -8,7 +8,9 @@
     "release:bootstrap": "node bin/bootstrap.js",
     "release:pr": "node bin/create-pr.js",
     "release:release": "node bin/github-release.js",
-    "migrate": "node-pg-migrate",
+    "migrate:create": "node-pg-migrate create",
+    "migrate:up": "node migrate-up.js",
+    "migrate:down": "node migrate-down.js",
     "start": "node main.js",
     "test": "mocha 'lib/**/*.test.js'"
   },

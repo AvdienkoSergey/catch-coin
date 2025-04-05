@@ -2,16 +2,22 @@ import config from './config.js';
 import logger from './lib/logger.js';
 import { db } from './lib/db.js';
 
-const client = db({
+const pool = db({
   host: config.db.host,
   port: config.db.port,
-  database: config.pg.database,
-  user: config.pg.user,
-  password: config.pg.password
+  database: config.db.database,
+  user: config.db.user,
+  password: config.db.password
 });
 
-logger.log('Connecting to database...', client.toString());
-const catchCoin = client('sometable');
+const rolesTable = pool('roles');
+const allRoles = await rolesTable.query('SELECT * FROM roles')
+logger.log(allRoles);
 
-const time = await catchCoin.query('SELECT NOW()');
-logger.log(time);
+const usersTable = pool('users');
+const allUsers = await usersTable.query('SELECT * FROM users')
+logger.log(allUsers);
+
+const accountsTable = pool('accounts');
+const allAccounts = await accountsTable.query('SELECT * FROM accounts')
+logger.log(allAccounts);
