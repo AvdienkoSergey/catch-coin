@@ -5,10 +5,11 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "test": "test",
     "release:bootstrap": "node bin/bootstrap.js",
     "release:pr": "node bin/create-pr.js",
-    "release:release": "node bin/github-release.js"
+    "release:release": "node bin/github-release.js",
+    "start": "node main.js",
+    "test": "test"
   },
   "repository": {
     "type": "git",
