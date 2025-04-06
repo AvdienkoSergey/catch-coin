@@ -13,7 +13,7 @@ node_modules
 .npmrc
 
 # log files
-log/*.log
+backend/log/*.log
 
 # migrations
 # migrations/*.js

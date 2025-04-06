@@ -8,11 +8,9 @@
     "release:bootstrap": "node bin/bootstrap.js",
     "release:pr": "node bin/create-pr.js",
     "release:release": "node bin/github-release.js",
-    "migrate:create": "node-pg-migrate create",
-    "migrate:up": "node migrate-up.js",
-    "migrate:down": "node migrate-down.js",
-    "start": "node main.js",
-    "test": "mocha 'lib/**/*.test.js'"
+    "app:start": "docker-compose up -d",
+    "app:stop": "docker-compose down",
+    "app:status": "docker-compose ps"
   },
   "repository": {
     "type": "git",
@@ -25,22 +23,6 @@
   },
   "homepage": "https://github.com/AvdienkoSergey/catch-coin#readme",
   "dependencies": {
-    "pg": "^8.14.1",
     "release-please": "^17.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "dotenv": "^16.4.7",
-    "mocha": "^11.1.0",
-    "node-pg-migrate": "^7.9.1",
-    "sinon": "^20.0.0",
-    "typescript": "^5.8.3"
-  },
-  "mocha": {
-    "timeout": 5000,
-    "extension": [
-      "js"
-    ],
-    "recursive": true
   }
 }

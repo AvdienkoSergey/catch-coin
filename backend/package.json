@@ -1,0 +1,38 @@
+{
+  "name": "catch-coin-backend",
+  "version": "0.0.0",
+  "description": "This backend is for catch-coin project",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha 'lib/**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvdienkoSergey/catch-coin.git"
+  },
+  "author": "AvdienkoSA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AvdienkoSergey/catch-coin/issues"
+  },
+  "homepage": "https://github.com/AvdienkoSergey/catch-coin#readme",
+  "dependencies": {
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "dotenv": "^16.4.7",
+    "mocha": "^11.1.0",
+    "sinon": "^20.0.0",
+    "typescript": "^5.8.3"
+  },
+  "mocha": {
+    "timeout": 5000,
+    "extension": [
+      "js"
+    ],
+    "recursive": true
+  }
+}

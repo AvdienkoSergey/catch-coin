@@ -1,5 +1,5 @@
 import path from 'node:path'; 
-import config from './config.js';  
+import config from '../backend/config.js';  
 import migrate from 'node-pg-migrate';
 
 // Set the correct migrations directory path

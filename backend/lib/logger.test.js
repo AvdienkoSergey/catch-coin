@@ -2,7 +2,7 @@ import assert from 'node:assert';
 import { describe, it, beforeEach, afterEach, after } from 'mocha';
 import fs from 'node:fs';
 import path from 'node:path';
-import logger from '../lib/logger.js';
+import logger from './logger.js';
 
 describe('Logger', () => {
   const originalConsoleLog = console.log;
