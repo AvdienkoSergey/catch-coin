@@ -8,7 +8,8 @@
     "release:bootstrap": "node bin/bootstrap.js",
     "release:pr": "node bin/create-pr.js",
     "release:release": "node bin/github-release.js",
-    "app:start": "docker-compose up -d",
+    "app:start:dev": "NODE_ENV=development docker-compose up -d",
+    "app:start:stage": "NODE_ENV=stage docker-compose up -d",
     "app:stop": "docker-compose down",
     "app:status": "docker-compose ps"
   },
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/AvdienkoSergey/catch-coin#readme",
   "dependencies": {
     "release-please": "^17.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
   }
 }

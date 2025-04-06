@@ -10,10 +10,13 @@ node_modules
 .vscode
 .cursor
 .env
+.env.development
+.env.stage
 .npmrc
 
 # log files
 backend/log/*.log
 
-# migrations
-# migrations/*.js
+# Docker files
+Dockerfile.development
+Dockerfile.stage

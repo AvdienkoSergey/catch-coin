@@ -1,6 +1,10 @@
 import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
+
+const environment = process.env.NODE_ENV || 'development';
+dotenv.config({ path: path.resolve(process.cwd(), `.env.${environment}`), override: true });
 
 const config = {
     static: {

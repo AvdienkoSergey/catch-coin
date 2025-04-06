@@ -2,7 +2,7 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.${NODE_ENV:-development}
     container_name: catch_coin_backend
     restart: always
     ports:
@@ -31,6 +31,18 @@ services:
       - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  swagger-ui:
+    image: docker.swagger.io/swaggerapi/swagger-ui
+    container_name: swagger-ui
+    restart: always
+    ports:
+      - "80:8080"
+    environment:
+      - SWAGGER_JSON_URL=https://petstore3.swagger.io/api/v3/openapi.json
+      # - SWAGGER_JSON=/swagger/swagger.json
+    # volumes:
+      # - ./swagger:/swagger
 
 volumes:
   postgres_data:
