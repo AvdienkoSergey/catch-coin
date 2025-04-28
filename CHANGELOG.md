@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.5.0...v1.6.0) (2025-04-28)
+
+
+### Features
+
+* added ionic to create mobile app ([4549a10](https://github.com/AvdienkoSergey/catch-coin/commit/4549a10c082fc80926557d967ade96bbc4319f8d))
+
 ## [1.5.0](https://github.com/AvdienkoSergey/catch-coin/compare/v1.4.0...v1.5.0) (2025-04-05)
 
 
