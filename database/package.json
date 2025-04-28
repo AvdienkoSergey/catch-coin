@@ -1,5 +1,5 @@
 {
-  "name": "catch-coin-database",
+  "name": "@catch-coin/database",
   "version": "0.0.0",
   "description": "",
   "main": "migrate-down.js",
