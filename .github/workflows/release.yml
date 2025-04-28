@@ -5,24 +5,30 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Create Release Pull Request
-        uses: google-github-actions/release-please-action@v3
+      - name: Create Release Pull Requests
+        uses: googleapis/release-please-action@v4
         with:
-          release-type: monorepo
-          config-file: .release-please-config.json
           token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: .release-please-config.json
+          command: manifest-pr
+
+      - name: Tag & Publish Releases
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: .release-please-config.json
+          skip-github-pull-request: true
+
