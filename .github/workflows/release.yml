@@ -18,17 +18,18 @@ jobs:
         with:
           node-version: 18
 
-      - name: Create Release Pull Requests
+      - name: Create Release PRs
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .release-please-config.json
-          command: manifest-pr
+          manifest-file: .release-please-manifest.json
+          skip-github-release: true
 
       - name: Tag & Publish Releases
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
           skip-github-pull-request: true
-
