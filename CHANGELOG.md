@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/AvdienkoSergey/catch-coin/compare/catch-coin-v1.7.0...catch-coin-v1.8.0) (2025-04-28)
+
+
+### Features
+
+* **@catch-coin/shared:** Installed shared dev dependencies for frontend apps ([f0626b1](https://github.com/AvdienkoSergey/catch-coin/commit/f0626b1d1aec86a757bc2a6b9a119f83c2c05e56))
+
 ## [1.7.0](https://github.com/AvdienkoSergey/catch-coin/compare/catch-coin-v1.6.0...catch-coin-v1.7.0) (2025-04-28)
 
 
