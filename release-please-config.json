@@ -9,13 +9,19 @@
       "prerelease": false
     },
     "frontend/mobile": {
-      "changelog-path": "frontend/mobile/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
     "backend": {
-      "changelog-path": "backend/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false
+    },
+    "database": {
+      "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
