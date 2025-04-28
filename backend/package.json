@@ -1,5 +1,5 @@
 {
-  "name": "catch-coin-backend",
+  "name": "@catch-coin/backend",
   "version": "0.0.0",
   "description": "This backend is for catch-coin project",
   "main": "main.js",
