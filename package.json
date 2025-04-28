@@ -4,7 +4,9 @@
   "private": true,
   "workspaces": [
     "frontend/mobile",
-    "backend"
+    "frontend/shared",
+    "backend",
+    "database"
   ],
   "description": "This app is for my daughter to learn financial literacy",
   "main": "main.js",
