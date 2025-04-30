@@ -8,43 +8,43 @@
       "draft": false,
       "prerelease": false
     },
-    "frontend/mobile": {
+    "packages/frontend/mobile": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "frontend/rules": {
+    "packages/frontend/rules": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "frontend/tests": {
+    "packages/frontend/tests": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "backend/migrations": {
+    "packages/backend/migrations": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "backend/rules": {
+    "packages/backend/rules": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "backend/server": {
+    "packages/backend/server": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false
     },
-    "backend/tests": {
+    "packages/backend/tests": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
