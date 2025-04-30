@@ -1,6 +1,6 @@
 import { defineConfig, type UserConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
+import * as path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
@@ -10,8 +10,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@catch-coin/frontend-mobile': path.resolve(__dirname, '../app-mobile'),
-      '@': path.resolve(__dirname, '../app-mobile/src'),
+      '@catch-coin/frontend-mobile': path.resolve(__dirname, '../mobile'),
+      '@': path.resolve(__dirname, '../mobile/src'),
     },
   },
-} as UserConfig); 
+} as unknown as UserConfig); 
