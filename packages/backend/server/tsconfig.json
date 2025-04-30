@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": ".",
+    "preserveWatchOutput": true,
+    "allowJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*.js", "**/*.ts", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

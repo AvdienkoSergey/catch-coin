@@ -1,0 +1,42 @@
+{
+  "name": "@catch-coin/frontend-mobile",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "vue-tsc && vite build",
+    "ionic:build": "vue-tsc && vite build",
+    "ionic:add:ios": "capacitor add ios",
+    "ionic:add:android": "capacitor add android",
+    "ionic:sync": "capacitor sync",
+    "dev:browser": "vite --host",
+    "dev:ios": "npm run ionic:build && npm run ionic:sync && capacitor open ios",
+    "dev:android": "npm run ionic:build && npm run ionic:sync && capacitor open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.2.0",
+    "@capacitor/core": "7.2.0",
+    "@capacitor/ios": "7.2.0",
+    "@catch-coin/frontend-rules": "workspace:*",
+    "@catch-coin/frontend-tests": "workspace:*",
+    "@ionic/vue": "^8.0.0",
+    "@ionic/vue-router": "^8.0.0",
+    "ionicons": "^7.0.0",
+    "pinia": "^2.1.0",
+    "typescript": "~5.6.2",
+    "vue": "^3.3.0",
+    "vue-router": "^4.2.0",
+    "vue-tsc": "^2.1.10"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.2.0",
+    "@catch-coin/frontend-tests": "workspace:*",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "typescript": "~5.6.2",
+    "vite": "~5.2.0",
+    "vue-tsc": "^2.1.10"
+  },
+  "description": "An Ionic project"
+}

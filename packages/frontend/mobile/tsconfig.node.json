@@ -1,0 +1,12 @@
+{
+  "extends": "@catch-coin/frontend-rules/tsconfig.node.json",
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "outDir": "./dist"
+  },
+  "include": ["vite.config.ts"]
+}
