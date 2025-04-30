@@ -33,7 +33,10 @@
     "backend:lint:fix": "yarn workspace @catch-coin/backend-server lint:fix",
     "backend:format": "yarn workspace @catch-coin/backend-server format",
     "backend:server:dev": "yarn workspace @catch-coin/backend-server run dev",
-    "backend:server:stage": "yarn workspace @catch-coin/backend-server run stage"
+    "backend:server:stage": "yarn workspace @catch-coin/backend-server run stage",
+    "packages:lint": "yarn workspace @catch-coin/frontend-rules lint && yarn workspace @catch-coin/backend-server lint",
+    "packages:format": "yarn workspace @catch-coin/frontend-rules format && yarn workspace @catch-coin/backend-server format",
+    "packages:tests": "yarn workspace @catch-coin/frontend-tests run test:unit && yarn workspace @catch-coin/backend-tests run test"
   },
   "repository": {
     "type": "git",
