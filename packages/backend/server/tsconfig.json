@@ -7,10 +7,12 @@
     "preserveWatchOutput": true,
     "allowJs": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "*",
-    "**/*"
-  ]
+  "include": ["**/*.js", "**/*.ts", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }

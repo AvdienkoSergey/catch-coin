@@ -4,7 +4,7 @@
  * @modified Sergey Avdiienko <https://github.com/AvdienkoSergey>
  */
 
-import pkg from 'pg';
+import pkg from "pg";
 const { Pool } = pkg;
 
 export const crud = (pool) => (table) => ({
@@ -13,8 +13,8 @@ export const crud = (pool) => (table) => ({
     return result.rows;
   },
 
-  async read(id, fields = ['*']) {
-    const names = fields.join(', ');
+  async read(id, fields = ["*"]) {
+    const names = fields.join(", ");
     const sql = `SELECT ${names} FROM ${table}`;
     if (!id) return pool.query(sql);
     return pool.query(`${sql} WHERE id = $1`, [id]);
@@ -30,7 +30,7 @@ export const crud = (pool) => (table) => ({
       nums[i] = `$${++i}`;
     }
     const fields = '"' + keys.join('", "') + '"';
-    const params = nums.join(', ');
+    const params = nums.join(", ");
     const sql = `INSERT INTO "${table}" (${fields}) VALUES (${params})`;
     return pool.query(sql, data);
   },
@@ -44,7 +44,7 @@ export const crud = (pool) => (table) => ({
       data[i] = record[key];
       updates[i] = `${key} = $${++i}`;
     }
-    const delta = updates.join(', ');
+    const delta = updates.join(", ");
     const sql = `UPDATE ${table} SET ${delta} WHERE id = $${++i}`;
     data.push(id);
     return pool.query(sql, data);

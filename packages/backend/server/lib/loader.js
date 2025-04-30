@@ -1,19 +1,50 @@
-/**
- * @fileoverview Logger
- * @author Timur Shemsedinov <https://github.com/tshemsedinov>
- * @modified Sergey Avdiienko <https://github.com/AvdienkoSergey>
- */
-
-import fs from 'node:fs/promises';
+import { createRequire } from 'module';
+import path from 'node:path';
 import vm from 'node:vm';
 
-export const load = (options) => async (filePath, sandbox) => {
-  const src = await fs.readFile(filePath, 'utf8');
-  const code = `'use strict';\n${src}`;
-  const script = new vm.Script(code);
-  const context = vm.createContext(Object.freeze({ ...sandbox }));
-  const exported = script.runInContext(context, options);
-  return exported;
-};
+import { build } from 'esbuild';
 
-export const loader = (options) => load(options);
+export function createLoader(opts = {}) {
+  const requireFn = createRequire(import.meta.url);
+
+  return async function loadModule(filePath, sandbox = {}) {
+    const { outputFiles } = await build({
+      entryPoints: [filePath],
+      bundle: true,
+      write: false,
+      platform: 'node',
+      format: 'cjs',
+      sourcemap: opts.displayErrors !== false,
+    });
+    const code = outputFiles[0].text;
+
+    const script = new vm.Script(code, {
+      filename: filePath,
+      displayErrors: opts.displayErrors,
+      timeout: opts.timeout,
+    });
+
+    const context = vm.createContext({});
+
+    for (const key of Object.keys(sandbox)) {
+      context[key] = sandbox[key];
+    }
+
+    const exports = {};
+    const module = { exports };
+    context.module   = module;
+    context.exports  = exports;
+    context.require  = requireFn;
+    context.__filename = filePath;
+    context.__dirname  = path.dirname(filePath);
+
+    script.runInContext(context, {
+      displayErrors: opts.displayErrors || false,
+      timeout: opts.timeout || 5_000,
+    });
+
+    return module.exports && module.exports.__esModule
+      ? module.exports.default
+      : module.exports;
+  };
+}
