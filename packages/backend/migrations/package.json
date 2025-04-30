@@ -1,7 +1,7 @@
 {
-  "name": "@catch-coin/database",
+  "name": "@catch-coin/backend-migrations",
   "version": "0.0.0",
-  "description": "",
+  "description": "Here lies the migrations for the backend",
   "main": "migrate-down.js",
   "type": "module",
   "scripts": {

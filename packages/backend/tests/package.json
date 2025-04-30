@@ -1,0 +1,48 @@
+{
+    "name": "@catch-coin/backend-tests",
+    "version": "0.0.0",
+    "description": "Here lies the tests for the backend",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "test": "mocha",
+        "test:watch": "mocha --watch",
+        "test:coverage": "c8 mocha"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.24.0",
+        "@babel/register": "^7.23.7",
+        "@types/node": "^22.14.0",
+        "c8": "^9.1.0",
+        "chai": "^5.0.3",
+        "mocha": "^11.1.0",
+        "mocha-sinon": "^2.1.2",
+        "sinon": "^20.0.0",
+        "typescript": "~5.6.2"
+    },
+    "mocha": {
+        "timeout": 5000,
+        "extension": [
+            "js",
+            "ts"
+        ],
+        "recursive": true,
+        "require": [
+            "@babel/register"
+        ],
+        "spec": [
+            "**/*.test.js",
+            "**/*.test.ts"
+        ],
+        "watch-files": [
+            "**/*.js",
+            "**/*.ts"
+        ],
+        "watch-ignore": [
+            "node_modules"
+        ]
+    }
+}

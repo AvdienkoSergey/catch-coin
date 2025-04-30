@@ -34,7 +34,11 @@
     "frontend:mobile:ionic:sync": "yarn workspace @catch-coin/frontend-mobile run ionic:sync",
     "frontend:mobile:ionic:add:ios": "yarn workspace @catch-coin/frontend-mobile run ionic:add:ios",
     "frontend:mobile:ionic:add:android": "yarn workspace @catch-coin/frontend-mobile run ionic:add:android",
-    "frontend:mobile:dev:android": "yarn workspace @catch-coin/frontend-mobile run dev:android"
+    "frontend:mobile:dev:android": "yarn workspace @catch-coin/frontend-mobile run dev:android",
+    "backend:server:dev": "yarn workspace @catch-coin/backend-server run dev",
+    "backend:server:stage": "yarn workspace @catch-coin/backend-server run stage",
+    "backend:tests": "yarn workspace @catch-coin/backend-tests run test",
+    "backend:tests:coverage": "yarn workspace @catch-coin/backend-tests run test:coverage"
   },
   "repository": {
     "type": "git",

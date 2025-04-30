@@ -1,13 +1,12 @@
 {
-  "name": "@catch-coin/backend",
+  "name": "@catch-coin/backend-server",
   "version": "0.0.0",
   "description": "This backend is for catch-coin project",
   "main": "main.js",
   "type": "module",
   "scripts": {
     "stage": "NODE_ENV=stage node main.js",
-    "dev": "NODE_ENV=development node main.js",
-    "test": "mocha 'lib/**/*.test.js'"
+    "dev": "NODE_ENV=development node main.js"
   },
   "repository": {
     "type": "git",
@@ -25,15 +24,6 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "dotenv": "^16.4.7",
-    "mocha": "^11.1.0",
-    "sinon": "^20.0.0",
     "typescript": "^5.8.3"
-  },
-  "mocha": {
-    "timeout": 5000,
-    "extension": [
-      "js"
-    ],
-    "recursive": true
   }
 }

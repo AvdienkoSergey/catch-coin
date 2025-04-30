@@ -1,0 +1,23 @@
+{
+    "name": "@catch-coin/backend-rules",
+    "version": "0.0.0",
+    "description": "Here lies the rules for the backend",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+        "lint:fix": "eslint . --ext .js,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+        "format": "prettier --write src/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.35.0",
+        "typescript": "~5.6.2"
+    },
+    "peerDependencies": {
+        "eslint": ">=8.0.0",
+        "typescript": ">=5.0.0"
+    }
+}

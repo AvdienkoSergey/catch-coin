@@ -1,7 +1,7 @@
 // db.test.js
 import { createSandbox } from 'sinon';
 import { strict as assert } from 'assert';
-import { crud } from './db.js';
+import { crud } from '@catch-coin/backend-server/lib/db.js';
 
 describe('CRUD Module', function() {
   let sandbox;
