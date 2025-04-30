@@ -1,4 +1,5 @@
 {
+  "extends": "@catch-coin/frontend-rules/tsconfig.node.json",
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",

@@ -5,6 +5,7 @@
 ### Setup
 
 1. Create or edit a `.env` file with these variables:
+
    ```
    DB_HOST=your_host
    DB_USER=your_username
@@ -14,11 +15,13 @@
    ```
 
 2. Initialize:
-    ```
-    docker-compose up -d
-    ```
+
+   ```
+   docker-compose up -d
+   ```
 
 3. Start the database:
+
    ```
    docker-compose ps
    ```
@@ -31,6 +34,7 @@
 ### Connecting to Database
 
 The PostgreSQL database is available at:
+
 - Host: DB_HOST value or localhost
 - Port: DB_PORT value or 5432
 - Username: DB_USER value
@@ -78,3 +82,24 @@ To create a new migration, run the following command:
 
 `chore`: Для вспомогательных изменений, не влияющих на исходный код или тесты (обновление документации, утилитарные скрипты и т.д.).
 Пример: chore: update dependencies
+
+## Установка и инициализация Yarn в корне проекта
+
+### Установка Yarn
+
+```
+npm install -g corepack
+corepack enable
+```
+
+### Инициализация Yarn
+
+```
+yarn set version stable
+```
+
+### Установка зависимостей
+
+```
+yarn install
+```

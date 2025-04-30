@@ -1,0 +1,21 @@
+{
+  "name": "@catch-coin/frontend-rules",
+  "version": "1.0.0",
+  "description": "Here lies the general logic for the frontend",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "format": "prettier --write src/"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "typescript": "~5.6.2",
+    "vue-tsc": "^2.1.10"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "typescript": ">=5.0.0"
+  }
+}

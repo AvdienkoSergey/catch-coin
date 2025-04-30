@@ -3,10 +3,14 @@
   "version": "1.8.0",
   "private": true,
   "workspaces": [
-    "frontend/mobile",
-    "frontend/shared",
-    "backend",
-    "database"
+    "packages/frontend/app-mobile",
+    "packages/frontend/app-web",
+    "packages/frontend/tests",
+    "packages/frontend/rules",
+    "packages/backend/migrations",
+    "packages/backend/rules",
+    "packages/backend/server",
+    "packages/backend/tests"
   ],
   "description": "This app is for my daughter to learn financial literacy",
   "main": "main.js",
@@ -18,7 +22,12 @@
     "app:start:dev": "NODE_ENV=development docker-compose up -d",
     "app:start:stage": "NODE_ENV=stage docker-compose up -d",
     "app:stop": "docker-compose down",
-    "app:status": "docker-compose ps"
+    "app:status": "docker-compose ps",
+    "lint": "yarn workspaces foreach --all run lint",
+    "lint:fix": "yarn workspaces foreach --all run lint:fix",
+    "test": "yarn workspaces foreach --all run test",
+    "test:unit": "yarn workspace @catch-coin/frontend-tests run test:unit",
+    "test:e2e": "yarn workspace @catch-coin/frontend-tests run test:e2e"
   },
   "repository": {
     "type": "git",
@@ -34,6 +43,8 @@
     "release-please": "^17.0.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
     "dotenv": "^16.4.7"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
