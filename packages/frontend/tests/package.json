@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@testing-library/vue": "^8.0.0",
+    "@vitejs/plugin-vue": "^5.2.3",
     "@vue/test-utils": "^2.3.0",
     "c8": "^8.0.0",
     "cypress": "^13.5.0",

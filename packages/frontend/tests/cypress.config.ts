@@ -1,6 +1,6 @@
-import { defineConfig } from "cypress";
+const { defineConfig } = require("cypress");
 
-export default defineConfig({
+module.exports = defineConfig({
   e2e: {
     supportFile: "e2e/support/e2e.{js,jsx,ts,tsx}",
     specPattern: "e2e/specs/**/*.cy.{js,jsx,ts,tsx}",
