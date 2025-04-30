@@ -4,15 +4,14 @@
   "version": "1.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint .",
-    "cap:add": "ionic cap add",
-    "cap:sync": "ionic cap sync",
-    "cap:open:ios": "ionic cap open ios",
-    "cap:open:android": "ionic cap open android",
-    "cap:build": "npm run build && ionic cap sync"
+    "ionic:build": "vue-tsc && vite build",
+    "ionic:add:ios": "capacitor add ios",
+    "ionic:add:android": "capacitor add android",
+    "ionic:sync": "capacitor sync",
+    "dev:browser": "vite --host",
+    "dev:ios": "npm run ionic:build && npm run ionic:sync && capacitor open ios",
+    "dev:android": "npm run ionic:build && npm run ionic:sync && capacitor open android"
   },
   "dependencies": {
     "@capacitor/android": "7.2.0",
@@ -30,6 +29,7 @@
     "vue-tsc": "^2.1.10"
   },
   "devDependencies": {
+    "@capacitor/cli": "7.2.0",
     "@catch-coin/frontend-tests": "workspace:*",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
